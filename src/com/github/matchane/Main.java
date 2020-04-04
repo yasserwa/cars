@@ -1,43 +1,116 @@
 package com.github.matchane;
 
-import com.github.matchane.models.BMW;
+import com.github.matchane.models.Mercedes;
+import com.github.matchane.models.Volkswagen;
+import com.github.matchane.models.Aprilia;
+import com.github.matchane.models.Chevrolet;
 
-/**
- * The project's main class, here we put the main method, the place where the code starts executing
- */
+
+
+
+
 public class Main {
 
-    /**
-     * The program's point of entry, our code execution starts here.
-     *
-     * @param args this is used to pass params to the program on launch
-     */
     public static void main(String[] args) {
-        BMW[] bmwCars = initBMWCars();
+    	Mercedes[] MrdCars = initMrdCars();
 
-        for (int i = 0; i < bmwCars.length; i++) {
-            System.out.println(bmwCars[i]);
+        for (int i = 0; i < MrdCars.length; i++) {
+            System.out.println(MrdCars[i]);
+        }
+        Chevrolet[] ChevroletCars = initChevroletCars();
+
+        for (int i = 0; i < ChevroletCars.length; i++) {
+            System.out.println(ChevroletCars[i]);
+        }
+        Volkswagen[] VolkCars = initVolkCars();
+
+        for (int i = 0; i < VolkCars.length; i++) {
+            System.out.println(VolkCars[i]);
+        }
+        Aprilia[] ApriliaMoto = initApriliaMoto();
+
+        for (int i = 0; i < ApriliaMoto.length; i++) {
+            System.out.println(ApriliaMoto[i]);
         }
     }
+    private static Chevrolet[] initChevroletCars() {
+    	Chevrolet[] ChevroletCarsReturn = new Chevrolet[2];
 
-    /**
-     * Simple method that initialize BMW cars/objects.
-     *
-     * @return a list of the created BMW cars
-     */
-    private static BMW[] initBMWCars() {
-        BMW[] carsToReturn = new BMW[3];
+        
+    	Chevrolet Volt = new Chevrolet("Volt ", 2011-2015
+ , "- Hybride Électricité + Essence" + 
+    			"" + 
+		 		"", "6-speed manual", 4);
+    	Chevrolet DodgeCharger
+    	 = new Chevrolet("Dodge Charger" + 
+    	 		"" + 
+    	 		"", 1969 , " 4 cylindres en ligne" + 
+    	 				"" + 
+    	 				"", "Manuelle 5 Rapports" + 
+    	 						"" + 
+    	 				"", 2);
+
+    	ChevroletCarsReturn[0] = Volt;
+    	ChevroletCarsReturn[1] = DodgeCharger;
+
+        return ChevroletCarsReturn;
+    }
+    private static Aprilia[] initApriliaMoto() {
+    	Aprilia[] MotoToReturn = new Aprilia[2];
+
+        
+    	Aprilia AF1  = new Aprilia("AF1 ", 1990 , "Monocylindre, 2 temps" + 
+		 		"", "6-speed manual", 0);
+    	Aprilia Scooter_50cc
+    	 = new Aprilia("Area 51" + 
+    	 		"", 2002 , "monocylindre 2 temps" + 
+    	 				"", "Variateur, courroie" + 
+    	 						"" + 
+    	 				"", 0);
+
+    	MotoToReturn[0] = AF1;
+    	MotoToReturn[1] = Scooter_50cc;
+
+        return MotoToReturn;
+    }
+
+    private static Mercedes[] initMrdCars() {
+    	Mercedes[] carsToReturn = new Mercedes[2];
 
         // creating the car objects
-        BMW m5 = new BMW("M5", 1995, "3.5â€“3.8 L S38 I6", "5-speed manual", 4);
-        BMW x6 = new BMW("X6", 1995, "4.4 L S63 V8-TT (petrol)", "8-speed ZF 8HP automatic", 5);
-        BMW m3 = new BMW("M3", 1995, "3.0-3.2 L S50/S52 I6", "5-speed manual", 2);
+    	Mercedes m240 = new Mercedes("240", 1988, "L6 (2,5 à 2,7 L) M 123 ; M 110" + 
+		 		"", "5-speed manual", 4);
+    	Mercedes MercedesBenz_220
+    	 = new Mercedes("Mercedes-Benz 220" + 
+    	 		"", 1951 , "6 cylindres en ligne" + 
+    	 				"", "BVM 4" + 
+    	 				"", 5);
 
-        // adding them to the cars list
-        carsToReturn[0] = m5;
-        carsToReturn[1] = x6;
-        carsToReturn[2] = m3;
+        carsToReturn[0] = m240;
+        carsToReturn[1] = MercedesBenz_220;
 
         return carsToReturn;
     }
+    
+    private static Volkswagen[] initVolkCars() {
+		 Volkswagen[] carsToReturn = new Volkswagen[2];
+
+		 Volkswagen m0 = new Volkswagen("Jetta", 1979, "1.1 50 ch à 1.6 110 ch " + 
+		 		"", "5-speed manual_Automatique 3 rapports" + 
+		 				"", 4);
+		 Volkswagen JettaSagitar
+= new Volkswagen("Jetta / Sagitar" + 
+		"", 2010 , "L4 1.2l Turbo 90ch (Essence)" + 
+				"" + 
+				"" + 
+				"", "Manuelle 6 Rapports" + 
+						"" + 
+				"", 4);
+
+	
+		 carsToReturn[0] = m0;
+	        carsToReturn[1] = JettaSagitar;
+	        
+	        return carsToReturn;
+	 }
 }

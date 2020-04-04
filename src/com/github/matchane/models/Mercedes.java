@@ -1,10 +1,8 @@
 package com.github.matchane.models;
 
-/**
- * Class representing BMW car models
- */
-public class BMW {
-    public static String MANUFACTURER = "BMW";
+
+public class Mercedes  {
+    public static String MANUFACTURER = "Mercedes";
 
     private String modelId;
     private int year;
@@ -12,17 +10,8 @@ public class BMW {
     private String transmission;
     private int doors;
 
-    /**
-     * this is a parametered constructor, used to create objects easier.<br>
-     * You can as many constructors as you need, but they need to have different method signatures (different parameters)
-     *
-     * @param modelId      the car model's Id
-     * @param year         the manufacturing year
-     * @param engine       the engine type
-     * @param transmission the transmission type
-     * @param doors        the number of doors
-     */
-    public BMW(String modelId, int year, String engine, String transmission, int doors) {
+   
+    public Mercedes(String modelId, int year, String engine, String transmission, int doors) {
         this.modelId = modelId;
         this.year = year;
         this.engine = engine;
@@ -30,15 +19,10 @@ public class BMW {
         this.doors = doors;
     }
 
-    /**
-     * This method exists by default in all Java Objects, we override/implement it to help us print the object data.
-     *
-     * @return A String representation of the object data
-     */
-    @Override
+   
     public String toString() {
-        return "BMW{" +
-                "manufacturer='" + BMW.MANUFACTURER + '\'' +
+        return "Mercedes{" +
+                "manufacturer='" + Mercedes.MANUFACTURER + '\'' +
                 "modelId='" + modelId + '\'' +
                 ", year='" + year + '\'' +
                 ", engine='" + engine + '\'' +
