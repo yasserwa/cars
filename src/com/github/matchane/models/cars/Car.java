@@ -1,4 +1,4 @@
-package com.github.matchane.models;
+package com.github.matchane.models.cars;
 
 /**
  * An abstract class representing a Car, specific car manufacturers will extend this class
@@ -19,17 +19,6 @@ public abstract class Car {
         this.engine = engine;
         this.transmission = transmission;
         this.doors = doors;
-    }
-
-    public String toString() {
-        return "=====================" +
-                "manufacturer='" + Chevrolet.MANUFACTURER + '\'' +
-                ", modelId='" + modelId + '\'' +
-                ", year='" + year + '\'' +
-                ", engine='" + engine + '\'' +
-                ", transmission='" + transmission + '\'' +
-                ", doors=" + doors +
-                "===================";
     }
 
     public String getModelId() {
