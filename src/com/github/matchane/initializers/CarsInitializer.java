@@ -1,4 +1,4 @@
-package com.github.matchane.models.initializers;
+package com.github.matchane.initializers;
 
 import com.github.matchane.models.cars.Aprilia;
 import com.github.matchane.models.cars.Chevrolet;

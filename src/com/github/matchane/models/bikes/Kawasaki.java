@@ -13,8 +13,8 @@ public class Kawasaki extends Bike {
                 ", modelId='" + getModelId() + '\'' +
                 ", year='" + getYear() + '\'' +
                 ", engine='" + getEngine() + '\'' +
-                ", transmission='" + getTopSpeed() + '\'' +
-                ", doors=" + isRacingBike() +
+                ", top Speed='" + getTopSpeed() + '\'' +
+                ", racing Bike=" + isRacingBike() +
                 " ****";
     }
 }

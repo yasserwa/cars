@@ -1,7 +1,7 @@
-package com.github.matchane.models.initializers;
-import com.github.matchane.models.bikes.Suzuki;
+package com.github.matchane.initializers;
 
 import com.github.matchane.models.bikes.Kawasaki;
+import com.github.matchane.models.bikes.Suzuki;
 
 /**
  * Initializer class for the existing Bikes
@@ -30,21 +30,19 @@ public class BikesInitializer {
 
         return kawasakiBikes;
     }
-    
-    public static Suzuki[] initSuzuki() {
-    	Suzuki[] SuzukiBikes = new Suzuki[2];
-    	Suzuki GSX_R125 = new Suzuki ("GSX_R125",2017,"monocylindre 4T, refroidissement par eau, double ACT, 4 soupaper",290,true);
-    			Suzuki DL_1000_VSTROM = new Suzuki("DL_1000_VSTROM",2003 ,"Bicylindre en V à 90°" ,310,true
-    					);
 
-    			
-    			
-    			
-    	SuzukiBikes[0]= GSX_R125;
-    	SuzukiBikes[1]= DL_1000_VSTROM;
-    	return SuzukiBikes;
-    	
-    
+    public static Suzuki[] initSuzuki() {
+        Suzuki[] SuzukiBikes = new Suzuki[2];
+        Suzuki GSX_R125 = new Suzuki("GSX_R125", 2017, "monocylindre 4T, refroidissement par eau, double ACT, 4 soupaper", 290, true);
+        Suzuki DL_1000_VSTROM = new Suzuki("DL_1000_VSTROM", 2003, "Bicylindre en V ï¿½ 90ï¿½", 310, true
+        );
+
+
+        SuzukiBikes[0] = GSX_R125;
+        SuzukiBikes[1] = DL_1000_VSTROM;
+        return SuzukiBikes;
+
+
     }
 
 }

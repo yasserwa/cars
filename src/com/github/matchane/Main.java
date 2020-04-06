@@ -1,13 +1,13 @@
 package com.github.matchane;
 
+import com.github.matchane.initializers.BikesInitializer;
+import com.github.matchane.initializers.CarsInitializer;
 import com.github.matchane.models.bikes.Kawasaki;
 import com.github.matchane.models.bikes.Suzuki;
 import com.github.matchane.models.cars.Aprilia;
 import com.github.matchane.models.cars.Chevrolet;
 import com.github.matchane.models.cars.Mercedes;
 import com.github.matchane.models.cars.Volkswagen;
-import com.github.matchane.models.initializers.BikesInitializer;
-import com.github.matchane.models.initializers.CarsInitializer;
 
 public class Main {
 
@@ -45,7 +45,7 @@ public class Main {
             System.out.println(kawasakiBikes[i]);
         }
         Suzuki[] SuzukiBikes = BikesInitializer.initSuzuki();
-        for (int i=0; i < SuzukiBikes.length;i++) {
+        for (int i = 0; i < SuzukiBikes.length; i++) {
             System.out.println(SuzukiBikes[i]);
 
         }
