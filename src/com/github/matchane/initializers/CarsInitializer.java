@@ -14,18 +14,8 @@ public class CarsInitializer {
         Chevrolet[] ChevroletCarsReturn = new Chevrolet[2];
 
 
-        Chevrolet Volt = new Chevrolet("Volt ", 2011 - 2015
-                , "- Hybride �lectricit� + Essence" +
-                "" +
-                "", "6-speed manual", 4);
-        Chevrolet DodgeCharger
-                = new Chevrolet("Dodge Charger" +
-                "" +
-                "", 1969, " 4 cylindres en ligne" +
-                "" +
-                "", "Manuelle 5 Rapports" +
-                "" +
-                "", 2);
+        Chevrolet Volt = new Chevrolet("Volt ", 2011, "- Hybride �lectricit� + Essence", "6-speed manual", 4);
+        Chevrolet DodgeCharger = new Chevrolet("Dodge Charger", 1969, " 4 cylindres en ligne", "Manuelle 5 Rapports", 2);
 
         ChevroletCarsReturn[0] = Volt;
         ChevroletCarsReturn[1] = DodgeCharger;

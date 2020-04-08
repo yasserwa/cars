@@ -2,6 +2,7 @@ package com.github.matchane;
 
 import com.github.matchane.initializers.BikesInitializer;
 import com.github.matchane.initializers.CarsInitializer;
+import com.github.matchane.models.Vehicle;
 import com.github.matchane.models.bikes.Kawasaki;
 import com.github.matchane.models.bikes.Suzuki;
 import com.github.matchane.models.cars.Aprilia;
@@ -9,45 +10,73 @@ import com.github.matchane.models.cars.Chevrolet;
 import com.github.matchane.models.cars.Mercedes;
 import com.github.matchane.models.cars.Volkswagen;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
+        Mercedes[] mrdCars = CarsInitializer.initMrdCars();
+        Chevrolet[] chevroletCars = CarsInitializer.initChevroletCars();
+        Volkswagen[] vwCars = CarsInitializer.initVolkCars();
+        Aprilia[] apriliaBikes = CarsInitializer.initApriliaMoto();
+        Kawasaki[] kawasakiBikes = BikesInitializer.initKawasakiBikes();
+        Suzuki[] suzukiBikes = BikesInitializer.initSuzuki();
+
+        List<Vehicle> vehicles = new ArrayList<>();
+        vehicles.addAll(Arrays.asList(mrdCars));
+        vehicles.addAll(Arrays.asList(chevroletCars));
+        vehicles.addAll(Arrays.asList(apriliaBikes));
+        vehicles.addAll(Arrays.asList(kawasakiBikes));
+        vehicles.addAll(Arrays.asList(suzukiBikes));
 
         // CARS =======================
         System.out.println("** CARS ======================= ");
-        Mercedes[] MrdCars = CarsInitializer.initMrdCars();
 
-        for (int i = 0; i < MrdCars.length; i++) {
-            System.out.println(MrdCars[i]);
+        for (int i = 0; i < mrdCars.length; i++) {
+            System.out.println(mrdCars[i]);
         }
-        Chevrolet[] ChevroletCars = CarsInitializer.initChevroletCars();
 
-        for (int i = 0; i < ChevroletCars.length; i++) {
-            System.out.println(ChevroletCars[i]);
+        for (int i = 0; i < chevroletCars.length; i++) {
+            System.out.println(chevroletCars[i]);
         }
-        Volkswagen[] VolkCars = CarsInitializer.initVolkCars();
 
-        for (int i = 0; i < VolkCars.length; i++) {
-            System.out.println(VolkCars[i]);
+        for (int i = 0; i < vwCars.length; i++) {
+            System.out.println(vwCars[i]);
         }
-        Aprilia[] ApriliaMoto = CarsInitializer.initApriliaMoto();
 
-        for (int i = 0; i < ApriliaMoto.length; i++) {
-            System.out.println(ApriliaMoto[i]);
+        for (int i = 0; i < apriliaBikes.length; i++) {
+            System.out.println(apriliaBikes[i]);
         }
 
         // BIKES ========================
         System.out.println("** BIKES ======================= ");
 
-        Kawasaki[] kawasakiBikes = BikesInitializer.initKawasakiBikes();
-
         for (int i = 0; i < kawasakiBikes.length; i++) {
             System.out.println(kawasakiBikes[i]);
         }
-        Suzuki[] SuzukiBikes = BikesInitializer.initSuzuki();
-        for (int i = 0; i < SuzukiBikes.length; i++) {
-            System.out.println(SuzukiBikes[i]);
+        for (int i = 0; i < suzukiBikes.length; i++) {
+            System.out.println(suzukiBikes[i]);
+        }
 
+        // SHOW ALL VEHICLES SORTED BY YEAR ========================
+        System.out.println("** VEHICLES SORTED BY YEAR ======================= ");
+        Vehicle temp;
+        for (int i = 0; i < vehicles.size(); i++)
+        {
+            for (int j = i + 1; j < vehicles.size(); j++) {
+                if (vehicles.get(i).getYear() > vehicles.get(j).getYear())
+                {
+                    temp = vehicles.get(i);
+                    vehicles.set(i, vehicles.get(j));
+                    vehicles.set(j, temp);
+                }
+            }
+        }
+
+        for (int i = 0; i < vehicles.size(); i++) {
+            System.out.println(vehicles.get(i));
         }
     }
 }
