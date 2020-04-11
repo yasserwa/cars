@@ -1,6 +1,7 @@
 package com.github.matchane.models.bikes;
 
-public class Kawasaki extends Bike {
+
+public class Kawasaki extends Bike implements Comparable<Kawasaki> {
     private static String MANUFACTURER = "YAMAHA";
 
     public Kawasaki(String modelId, int year, String engine, int topSpeed, boolean racingBike) {
@@ -17,4 +18,11 @@ public class Kawasaki extends Bike {
                 ", racing Bike=" + isRacingBike() +
                 " ****";
     }
+
+	@Override
+	public int compareTo(Kawasaki q) {
+		// TODO Auto-generated method stub
+		
+		return this.year - q.year;
+	}
 }

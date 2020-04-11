@@ -12,6 +12,7 @@ import com.github.matchane.models.cars.Volkswagen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -21,7 +22,7 @@ public class Main {
         Chevrolet[] chevroletCars = CarsInitializer.initChevroletCars();
         Volkswagen[] vwCars = CarsInitializer.initVolkCars();
         Aprilia[] apriliaBikes = CarsInitializer.initApriliaMoto();
-        Kawasaki[] kawasakiBikes = BikesInitializer.initKawasakiBikes();
+        Kawasaki[] kawasakiBikes = BikesInitializer.initKawsakiBikes();
         Suzuki[] suzukiBikes = BikesInitializer.initSuzuki();
 
         List<Vehicle> vehicles = new ArrayList<>();
@@ -63,11 +64,9 @@ public class Main {
         // SHOW ALL VEHICLES SORTED BY YEAR ========================
         System.out.println("** VEHICLES SORTED BY YEAR ======================= ");
         Vehicle temp;
-        for (int i = 0; i < vehicles.size(); i++)
-        {
+        for (int i = 0; i < vehicles.size(); i++) {
             for (int j = i + 1; j < vehicles.size(); j++) {
-                if (vehicles.get(i).getYear() > vehicles.get(j).getYear())
-                {
+                if (vehicles.get(i).getYear() > vehicles.get(j).getYear()) {
                     temp = vehicles.get(i);
                     vehicles.set(i, vehicles.get(j));
                     vehicles.set(j, temp);
@@ -77,7 +76,45 @@ public class Main {
 
         for (int i = 0; i < vehicles.size(); i++) {
             System.out.println(vehicles.get(i));
+
+            System.out.println("** VEHICLES SORTED BY YEAR ======================= ");
+        /* Vehicle temp;
+        for (int i = 0; i < vehicles.size(); i++)
+        {
+            for (int j = i + 1; j < vehicles.size(); j++) {
+                if (vehicles.get(i).getYear() > vehicles.get(j).getYear())
+                    {
+                    temp = vehicles.get(i);
+                    vehicles.set(i, vehicles.get(j));
+                    vehicles.set(j, temp);
+                }
+            }
         }
+
+        for (int i = 0; i < vehicles.size(); i++) {
+    		System.out.println(vehicles.get(i));
+           
+        }*/
+
+
+            /* Sorted List*/
+            System.out.println("Student Name Sorting:");
+            Collections.sort(vehicles, Vehicle.StuidComparator);
+
+            for (Vehicle vml : vehicles) {
+                System.out.println(vml);
+            }
+        }
+
     }
 }
+ 
+
+
+
+
+
+
+
+
     

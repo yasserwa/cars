@@ -46,7 +46,7 @@ public class CarsInitializer {
         Mercedes[] carsToReturn = new Mercedes[2];
 
         // creating the car objects
-        Mercedes m240 = new Mercedes("240", 1988, "L6 (2,5 � 2,7 L) M 123 ; M 110" +
+        Mercedes m240 = new Mercedes("w240", 1988, "L6 (2,5 � 2,7 L) M 123 ; M 110" +
                 "", "5-speed manual", 4);
         Mercedes MercedesBenz_220
                 = new Mercedes("Mercedes-Benz 220" +
