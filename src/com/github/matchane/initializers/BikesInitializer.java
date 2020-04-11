@@ -1,19 +1,29 @@
 package com.github.matchane.initializers;
 
+import java.util.ArrayList;
+import java.util.*;  
+import java.util.Comparator;
+import java.util.*; 
+import java.lang.*; 
+import java.io.*;
+import java.util.Collections;
+
+import com.github.matchane.models.Vehicle;
 import com.github.matchane.models.bikes.Kawasaki;
 import com.github.matchane.models.bikes.Suzuki;
+import com.github.matchane.models.cars.Car;
 
 /**
  * Initializer class for the existing Bikes
  */
-public class BikesInitializer {
+public class BikesInitializer  {
 
-    public static Kawasaki[] initKawasakiBikes() {
+    public static Kawasaki[] initKawsakiBikes() {
         Kawasaki[] kawasakiBikes = new Kawasaki[2];
 
         Kawasaki ninjaH2R = new Kawasaki(
                 "Ninja H2R ",
-                2015,
+                202,
                 "Supercharged (two-speed centrifugal) 998 cc inline-4 DOHC",
                 331,
                 true);
@@ -41,8 +51,14 @@ public class BikesInitializer {
         SuzukiBikes[0] = GSX_R125;
         SuzukiBikes[1] = DL_1000_VSTROM;
         return SuzukiBikes;
-
-
+        
     }
+    
+     
+   
+	}    
+	
+			
+	
 
-}
+

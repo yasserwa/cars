@@ -1,4 +1,6 @@
 package com.github.matchane.models.cars;
+import java.util.Comparator;
+
 
 import com.github.matchane.models.Vehicle;
 
@@ -32,5 +34,9 @@ public abstract class Car extends Vehicle {
 
     public void setDoors(int doors) {
         this.doors = doors;
+    }
+    public int compareTo(Car car) {
+    	// TODO Auto-generated method stub
+    	return this.doors - car.doors;
     }
 }

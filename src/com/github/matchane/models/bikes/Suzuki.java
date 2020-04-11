@@ -1,5 +1,6 @@
 package com.github.matchane.models.bikes;
 
+
 public class Suzuki extends Bike {
     private static String MANUFACTURER = "Suzuki";
 
@@ -16,6 +17,9 @@ public class Suzuki extends Bike {
                 "top Speed = " + getTopSpeed() + '\'' +
                 "racing Bike = " + isRacingBike() + '\'' +
                 " ****";
+    } public int compareTo(Suzuki st) {
+    	// TODO Auto-generated method stub
+    	return st.getYear() - this.getYear();
     }
 }
 

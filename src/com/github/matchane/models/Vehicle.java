@@ -1,14 +1,33 @@
 package com.github.matchane.models;
 
+import java.util.Comparator;
+
 /**
  * An abstract class representing a Vehicle
  */
-public abstract class Vehicle {
-    private static String MANUFACTURER;
+public abstract class Vehicle   {
 
-    private String modelId;
-    private int year;
-    private String engine;
+	 public static Comparator<Vehicle> StuidComparator = new Comparator<Vehicle>() {
+
+			public int compare(Vehicle s1, Vehicle s2) {
+
+		    	   String ModelId1 = s1.getModelId().toUpperCase();
+		    	   String ModelId2 = s2.getModelId().toUpperCase();
+
+		    	   //ascending order
+		    	   return ModelId1.compareTo(ModelId2);
+
+		    	   //descending order
+		    	   //return StudentName2.compareTo(StudentName1);
+		        }
+
+			
+			};
+	private static String MANUFACTURER;
+
+    public String modelId;
+    public int year;
+    public String engine;
 
     public Vehicle(String modelId, int year, String engine) {
         this.modelId = modelId;
@@ -39,4 +58,7 @@ public abstract class Vehicle {
     public void setEngine(String engine) {
         this.engine = engine;
     }
+   
 }
+    
+
