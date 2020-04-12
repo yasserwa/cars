@@ -1,4 +1,4 @@
-package com.github.matchane.models;
+package com.github.yasserwa.models;
 
 import java.util.Comparator;
 

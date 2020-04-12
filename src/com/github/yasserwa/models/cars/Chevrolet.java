@@ -1,9 +1,10 @@
-package com.github.matchane.models.cars;
+package com.github.yasserwa.models.cars;
 
-public class Volkswagen extends Car {
-    public static String MANUFACTURER = "Volkswagen";
 
-    public Volkswagen(String modelId, int year, String engine, String transmission, int doors) {
+public class Chevrolet extends Car {
+    public static String MANUFACTURER = "Chevrolet ";
+
+    public Chevrolet(String modelId, int year, String engine, String transmission, int doors) {
         super(modelId, year, engine, transmission, doors);
     }
 

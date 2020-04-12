@@ -1,8 +1,7 @@
-package com.github.matchane.models.cars;
-import java.util.Comparator;
+package com.github.yasserwa.models.cars;
 
 
-import com.github.matchane.models.Vehicle;
+import com.github.yasserwa.models.Vehicle;
 
 /**
  * An abstract class representing a Car, specific car manufacturers will extend this class

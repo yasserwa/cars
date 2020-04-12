@@ -1,17 +1,7 @@
-package com.github.matchane.initializers;
+package com.github.yasserwa.initializers;
 
-import java.util.ArrayList;
-import java.util.*;  
-import java.util.Comparator;
-import java.util.*; 
-import java.lang.*; 
-import java.io.*;
-import java.util.Collections;
-
-import com.github.matchane.models.Vehicle;
-import com.github.matchane.models.bikes.Kawasaki;
-import com.github.matchane.models.bikes.Suzuki;
-import com.github.matchane.models.cars.Car;
+import com.github.yasserwa.models.bikes.Kawasaki;
+import com.github.yasserwa.models.bikes.Suzuki;
 
 /**
  * Initializer class for the existing Bikes

@@ -1,6 +1,6 @@
-package com.github.matchane.models.bikes;
+package com.github.yasserwa.models.bikes;
 
-import com.github.matchane.models.Vehicle;
+import com.github.yasserwa.models.Vehicle;
 
 /**
  * An abstract class representing a Bike, specific car manufacturers will extend this class

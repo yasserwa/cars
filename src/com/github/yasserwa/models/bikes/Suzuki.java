@@ -1,4 +1,4 @@
-package com.github.matchane.models.bikes;
+package com.github.yasserwa.models.bikes;
 
 
 public class Suzuki extends Bike {

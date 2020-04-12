@@ -1,9 +1,9 @@
-package com.github.matchane.initializers;
+package com.github.yasserwa.initializers;
 
-import com.github.matchane.models.cars.Aprilia;
-import com.github.matchane.models.cars.Chevrolet;
-import com.github.matchane.models.cars.Mercedes;
-import com.github.matchane.models.cars.Volkswagen;
+import com.github.yasserwa.models.cars.Aprilia;
+import com.github.yasserwa.models.cars.Chevrolet;
+import com.github.yasserwa.models.cars.Mercedes;
+import com.github.yasserwa.models.cars.Volkswagen;
 
 /**
  * Initializer class for the existing cars
